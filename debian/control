@@ -1,0 +1,25 @@
+Source: kiwix-tools
+Section: utils
+Priority: optional
+Maintainer: Kiwix team <kiwix@kiwix.org>
+Build-Depends: debhelper-compat (= 13),
+               libkiwix-dev (>= 10.0.0~),
+               libzim-dev (>= 7.2.0~),
+               meson,
+               pkg-config,
+Standards-Version: 4.5.0
+Homepage: https://github.com/kiwix/kiwix-tools
+Rules-Requires-Root: no
+
+Package: kiwix-tools
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: collection of Kiwix tools
+ kiwix-tools is a collection of various command-line tools used to help
+ users interact with and manage ZIM files. It includes:
+  * kiwix-serve is a standalone HTTP server for serving ZIM files
+    over the network.
+  * kiwix-manage allows one to manage the content of the Kiwix library (an
+    XML file listing available ZIM files).
+  * kiwix-search allows one to find articles in a ZIM file using fulltext
+    search patterns.
